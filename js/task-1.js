@@ -8,10 +8,11 @@
 const title = [];
 function slugify(title) { 
     const slugLow = title.toLowerCase();
-    return(slugLow.join("-"));
-
-
+    const words = slugLow.split(" ");
+	return (words.join("-"));
 };
+
+
 console.log(slugify("Arrays for begginers")); // "arrays-for-begginers"
 console.log(slugify("English for developer")); // "english-for-developer"
 console.log(slugify("Ten secrets of JavaScript")); // "ten-secrets-of-javascript"
