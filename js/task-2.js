@@ -6,10 +6,12 @@
 
 const firstArray = [];
 const secondArray = [];
-const sumArray = [firstArray + secondArray];
+
 function makeArray(firstArray, secondArray, maxLength) {
+    const sumArray = [...firstArray, ...secondArray];
     if (sumArray.length > maxLength) {
-        return (slice.sumArray(maxLength));
+        const stringArray = String(sumArray);
+        return (sumArray.slice(0, maxLength));
     } else { 
         return (sumArray);
     };
